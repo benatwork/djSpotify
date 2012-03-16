@@ -1,0 +1,41 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: #191919;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #191919;
+  height: 100%;
+}
+
+
+div.title { margin: 0 auto; background-color: #555555; }
+
+h1.title img { position: relative; float: left; margin-right: 10px; margin-top: 30px; }
+
+h1.title div {
+  width: 479px;
+  height: 156px;
+  float: left;
+}
+
+h1.title div span {
+font-family:'Mistral W01';
+}
+
+h1.title div span {
+  display: none;
+}
+.djView{
+  height: 50%;
+}
+
+/*button.stop {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}*/

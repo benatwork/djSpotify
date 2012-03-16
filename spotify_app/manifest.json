@@ -1,0 +1,19 @@
+{
+    "BundleType": "Application",
+    "AppIcon": {
+        "36x18": "vgstaad-icon.png"
+    },
+    "AppName": {
+        "en": "VGstaad"
+    },
+    "SupportedLanguages": [
+        "en"
+    ],
+    "RequiredPermissions": [
+        "http://driveti.me:8081",
+        "https://ajax.googleapis.com"
+    ]
+    "AcceptedLinkTypes": [
+      "playlist"
+    ]
+}

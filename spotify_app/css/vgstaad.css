@@ -1,0 +1,188 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: #191919;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #191919;
+  height: 100%;
+}
+
+span.clear {
+  display: block;
+  clear: both;
+}
+
+.left {
+  float: left;
+  width: 45%;
+}
+
+.right {
+  float: right;
+  width: 45%;
+}
+
+.mainframe {
+  margin: 20px 0;
+}
+
+#nameSetup {
+  display: none;
+}
+
+#nameSetup input {
+  box-shadow: 0px 0 1px 1px rgba(0,0,0,1), 0px 0px 4px 4px rgba(255, 0, 128, 1);
+  border: none;
+  background-color: #1f1f1f;
+  font-size: 1em;
+  color: #ff0080;
+  margin: 0 5px;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+tr:nth-child(2n + 1) td {
+  background: #444;
+}
+
+tr td:nth-child(4) {
+  text-align: right;
+}
+
+tr td, tr th {
+  padding: 2px 5px;
+}
+
+div.title { margin: 0 auto; background-color: #555555; }
+
+h1.title img { position: relative; float: left; margin-right: 10px; margin-top: 30px; }
+
+h1.title div {
+  width: 479px;
+  height: 156px;
+  float: left;
+}
+
+h1.title div span {
+font-family:'Mistral W01';
+}
+
+h1.title div span {
+  display: none;
+}
+
+/*button.stop {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  background-color: #111111;
+  height: 25px;
+}
+
+footer p {
+  margin-top: 4px;
+  font-size: 1.6em;
+}
+
+#djs {
+  box-shadow: 0 0 5px 5px #111111 inset;
+  background-color: #222222;
+  border-radius: 5px;
+  margin: 30px;
+  height: 100px;
+
+  padding: 30px;
+}
+
+#stop-listening, #stop-broadcasting {
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  display: none;
+}
+
+#nameDisplay {
+  margin: 10px 0;
+}
+
+#playlist {
+  display: none;
+}
+
+#nowplaying {
+  display: none;
+}
+
+span#nameDisplay {
+  color: #ff0080;
+}
+
+span.wht {
+  color: #fff;
+}
+
+p.instructions {
+  margin: 0 0 20px;
+}
+
+.sp-image {
+  width: 300px;
+  height: 300px;
+  font-family: "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.sp-image .playing-deets {
+  background: #222;
+  color: #ccc;
+  padding: 10px;
+  opacity: 0.9;
+}
+
+#djlist {
+  margin: 10px 0;
+}
+
+#djlist li {
+  margin: 0 0 5px;
+}
+
+#djlist li h3 {
+  font-size: 18px;
+}
+
+#djlist li a:link, #djlist li a:visited {
+  color: #999;
+}
+
+#djlist li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.list {
+  padding: 0 30px;
+}
+
+.list .sp-list {
+  box-shadow: 0 0 4px 6px rgba(0, 0, 0, 1), 0 0 4px 8px rgba(255, 0, 128, 1);
+}

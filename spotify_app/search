@@ -1,0 +1,57 @@
+alert('search scripts loaded')
+
+function submitSearch(){
+	console.log('searching for ' + document.searchForm.artistName.value);
+	albumSearch(document.searchForm.artistName.value);
+}
+function albumSearch(query){
+	sp.core.search(query,
+	    {onSuccess: function(result) {
+	        displayAlbums(result);
+	        }
+	    }
+	);
+}
+function displayAlbums(res){
+	console.log(res);
+	var i;
+	var artist = res.artists[0];
+	//body.innerHTML = artist.name+"<br/><br/><img src='"+artist.portrait+"'/>";
+	var albumList = "<ul>\n";
+	for (var i = 0; i < res.albums.length; i++) {
+		var album = res.albums[i];
+		albumList = albumList + "<li><div onClick=tutorial.showAlbum('"+album.uri+"') class='albumItem'><img class='albumImage' src='"+album.cover+"' width='100px'/><span class='albumTitle'>" + album.name + "</span></div></a></li>\n";
+	};
+	albumList = albumList + "</ul>\n";
+	body.innerHTML = albumList;
+
+}
+function showAlbum(albumUri){
+	//doSearch(e);
+	var a = models.Album.fromURI(albumUri, function(album) {
+	    console.log("Album loaded", album);
+	    body.innerHtml = "";
+	    var trackList = "<div class='albumItem'><ul>"
+	 
+	    for (var i = 0; i < album.data.tracks.length; i++) {
+	    	var tracks = album.data.tracks[i]
+	    	console.log(tracks.name);
+	    	trackList = trackList+"<li><div onClick=tutorial.trackSelected('"+tracks.uri+"') class='trackTitle'>"+tracks.name+"</div></li>";
+	    }
+
+	    trackList = trackList + "</ul></div>"
+	    body.innerHTML = trackList;
+	});
+}
+
+function trackSelected(trackUri){
+	var t = models.Track.fromURI(trackUri, function(track) {
+	    console.log("Track loaded", track);
+
+	    //player.context = album;
+	});	
+
+	player.track = t;
+	player.playing = true;
+	document.body.appendChild(player.node);
+}
